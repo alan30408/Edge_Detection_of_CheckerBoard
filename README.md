@@ -18,7 +18,7 @@ The [Data] folder include five pictures of chessboard, each of them has differen
 
 ## Algorithms
 ### Grey scale
-If we want to detect edge of figure, first we need to change colour to grey scale, which represent only amount of light, it is only intensity information.
+If we want to detect edge of checkerboard, first we need to change colour to grey scale, which represent only amount of light, it is only intensity information.
 ![pic2](https://user-images.githubusercontent.com/70020458/122487398-786b0880-cfdb-11eb-8c89-4f4bb00daf8c.jpg)
 
 ### Noise Reduction
