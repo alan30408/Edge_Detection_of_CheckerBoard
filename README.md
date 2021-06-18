@@ -62,7 +62,7 @@ if calling filter or detector with wrong name, it will show what you input and w
 
 if kernel is not **None**, it will show kernel is using, filter doesn't work.
 
-if model run successfully, then it will show the output path with output file name.
+if model run successfully, it will show the output path with output file name.
 
 
 ## usage example
