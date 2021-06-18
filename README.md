@@ -14,12 +14,12 @@ pip install numpy                <Numpy>
 # Experiment
 ## Data
 The [Data] folder include five pictures of chessboard, each of them has different noise and rotation.
-![Figure_1](https://user-images.githubusercontent.com/70020458/122476363-57e48380-cfc6-11eb-94b0-866cd7213e68.png)
+![pic1](https://user-images.githubusercontent.com/70020458/122487395-7739db80-cfdb-11eb-9e0e-845e6e1116b7.jpg)
 
 ## Algorithms
 ### Grey scale
 If we want to detect edge of figure, first we need to change colour to grey scale, which represent only amount of light, it is only intensity information.
-![Figure 2]
+![pic2](https://user-images.githubusercontent.com/70020458/122487398-786b0880-cfdb-11eb-8c89-4f4bb00daf8c.jpg)
 
 ### Noise Reduction
 Noise is a important factor for edge detection, so here we need to use different smooth filter to reduce noise, thus, to enhance the result.
@@ -31,7 +31,7 @@ There are four common kernel for noise removing provided by opencv:
 
 ### Threshold
 Threshold will change grey scale to binary impression, if pixel value larger than threshold become 255, while 0 if under threshold.
-![Figure 3]
+![pic3](https://user-images.githubusercontent.com/70020458/122487400-799c3580-cfdb-11eb-8177-e84ef6c69cf1.jpg)
 
 ### Edge Detection
 Edge detection is one of the important operation when we do image processing. It helps us reduce the amount of pixels to process and maintains the structure of the image. There are three common edge dection functions provided by opencv:
@@ -68,9 +68,12 @@ if model run successfully, then it will show the output path with output file na
 ## usage example
 ```
 python .\edge_detector.py -p "../data/*.png"
-python .\edge_detector.py -p "../data/Image_01.png" -d "laplacian" -w size=4
+python .\edge_detector.py -p "../data/Image_1.png" -d "laplacian" -w size=7
 python .\edge_detector.py -p "../data/*.jpg" -f "average"
-python .\edge_detector.py -p "../data/Image_05.jpg" -k "([0.06, 0.1, 0.06],[0.1, 0.36, 0.1],[0.06, 0.1, 0.06])" -o png
+python .\edge_detector.py -p "../data/Image_5.jpg" -k "([0.06, 0.1, 0.06],[0.1, 0.36, 0.1],[0.06, 0.1, 0.06])" -o png
 python .\edge_detector.py -p "../data/*.png" -f "median" -d "sobel" -w depth=5
 python .\edge_detector.py -p "../data/*.png" -f "bilateral" -o jpg -w threshold=140 sigma=65
 ```
+
+## output
+![pic4](https://user-images.githubusercontent.com/70020458/122487642-03e49980-cfdc-11eb-9ce7-8be708b51de3.jpg)
