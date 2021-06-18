@@ -72,7 +72,7 @@ python .\edge_detector.py -p "../data/Image_1.png" -d "laplacian" -w size=7
 python .\edge_detector.py -p "../data/*.jpg" -f "average"
 python .\edge_detector.py -p "../data/Image_5.jpg" -k "([0.5, 0.1, 0.1],[0.1, 0.36, 0.1],[0.1, 0.1, 0.06])" -o png
 python .\edge_detector.py -p "../data/*.png" -f "median" -d "sobel" -w depth=5
-python .\edge_detector.py -p "../data/*.png" -f "bilateral" -o jpg -w threshold=140 sigma=65 -o png
+python .\edge_detector.py -p "../data/*.png" -f "bilateral" -o png -w threshold=140 sigma=65 
 ```
 
 ## output
