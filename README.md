@@ -52,18 +52,18 @@ input path is neccessary, other parameters are optinal.
 - *-d*: Edge detection function, the default is **canny**, you can choose detector in **sobel, laplacian, canny**.
 - *-o*: output file format, the default is **jpg**, you can choose file format from [cv2.imwrite()](https://docs.opencv.org/3.4/d4/da8/group__imgcodecs.html#gabbc7ef1aa2edfaa87772f1202d67e0ce).
 - *-w*: kwargs, the default is below, you can change the size and sigma parameters in noise reduction, depth in edge function and the threshold from grey scale to binary. You can change the parameter by **-w 'size'=int.type 'sigma'=int.type 'depth'=int.type 'threshold'=int.type**. All parameters need to following the limitation in opencv
-
-if calling filter or detector with wrong name, it will show what you input and what you could choose to take.
-
-if kernel is not **None**, it will show kernel is using, filter doesn't work.
-
-if model run successfully, then it will show the output path with output file name.
 ```
 'threshold': 150 
 'size': 5
 'sigma': 75
 'depth': 6
 ```
+if calling filter or detector with wrong name, it will show what you input and what you could choose to take.
+
+if kernel is not **None**, it will show kernel is using, filter doesn't work.
+
+if model run successfully, then it will show the output path with output file name.
+
 
 ## usage example
 ```
