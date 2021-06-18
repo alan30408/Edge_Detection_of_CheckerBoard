@@ -59,7 +59,7 @@ if kernel is not **None**, it will show kernel is using, filter doesn't work.
 
 if model run successfully, then it will show the output path with output file name.
 ```
-'threshold': 170 
+'threshold': 150 
 'size': 5
 'sigma': 75
 'depth': 6
