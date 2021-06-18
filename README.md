@@ -11,7 +11,7 @@ pip install opencv-python        <opencv>
 pip install numpy                <Numpy>
 ```
 
-# Experiment
+# Implementation
 ## Data
 The [Data] folder include five pictures of chessboard, each of them has different noise and rotation.
 ![pic1](https://user-images.githubusercontent.com/70020458/122487395-7739db80-cfdb-11eb-9e0e-845e6e1116b7.jpg)
@@ -78,3 +78,11 @@ python .\edge_detector.py -p "../data/*.png" -f "bilateral" -o png -w threshold=
 ## output
 result with default parameters.
 ![pic4](https://user-images.githubusercontent.com/70020458/122487642-03e49980-cfdc-11eb-9ce7-8be708b51de3.jpg)
+
+# Improvement
+1. Noise removal
+When the noise exists on the checkerboard, especially located on edge, it is hard for smooth filter to remove appropriately. we can try more special filter or pre-defined kernel in order to sharp noise removal in checkerboard, so that the edge we found become more precise
+2. Threshold selection
+The edge is considered to be the place where the brightness of pixel changes, so threshold is most important step in edge detection. when we do batch image processing with fixed threshold, some of them will perform worse because of noise or rotation. So maybe we can create a function specialize the value of threshold with batch processing. e.g., threshold = np.array([150, 150, 170, 150])
+3. Affine Transformation of Image
+In this model, we only consider straigth line, so it cannot handle affine transformation of image, for example, Rotations and translations. We can use [Hough Line transformation](https://docs.opencv.org/3.4/d9/db0/tutorial_hough_lines.html) and [Hough Circle Transform](https://docs.opencv.org/3.4/d4/d70/tutorial_hough_circle.html) to overcome this problem, it will express lines in the Polar system, and find the intersection point between curves line, which means that both points belong to a same line.
